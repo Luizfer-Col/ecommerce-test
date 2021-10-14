@@ -1,9 +1,18 @@
+.containernav{
+    display: flex;
+    width: 1200px;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .searchBar{
     border-radius: 4px;
     border: 1px solid black;
-    display:flex;
+    display: flex;
     padding: 5px;
     height: 40px;
+    width: 600px;
+    justify-content: space-between;
     
     /* max- */
 }
@@ -29,4 +38,15 @@ button{
 }
 button:hover{
     cursor: pointer;
+}
+.ingresa{
+    display: flex;
+    flex-direction: column;
+}
+.ingresa h5 h6{
+    margin:0
+}
+.carrito{
+    display: flex;
+    /* flex-direction; */
 }
