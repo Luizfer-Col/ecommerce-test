@@ -1,0 +1,7 @@
+.container{
+    min-width: 1400px;
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+}

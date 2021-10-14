@@ -1,8 +1,10 @@
 .containernav{
     display: flex;
-    width: 1200px;
+    /* width: max-content; */
     margin: 0;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .searchBar{
@@ -11,14 +13,14 @@
     display: flex;
     padding: 5px;
     height: 40px;
-    width: 600px;
+    width: 800px;
     justify-content: space-between;
     
     /* max- */
 }
 .input{
     border: none;
-    width: 500px;
+    width: 650px;
     padding: 10px;
 }
 .input:focus {
@@ -43,7 +45,7 @@ button:hover{
     display: flex;
     flex-direction: column;
 }
-.ingresa h5 h6{
+.ingresa h5, h6{
     margin:0
 }
 .carrito{
