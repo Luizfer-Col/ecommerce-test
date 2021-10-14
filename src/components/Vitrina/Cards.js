@@ -1,17 +1,19 @@
 import React, { Fragment } from "react";
 import Style from "./Cards.module.css";
-import Silla1 from "../../images/sillas/silla01.png"
-import Silla2 from "../../images/sillas/silla02.png"
-import Silla3 from "../../images/sillas/silla03.png"
-import Silla4 from "../../images/sillas/silla04.png"
+// import Silla1 from "../../images/sillas/silla01.png"
+// import Silla2 from "../../images/sillas/silla02.png"
+// import Silla3 from "../../images/sillas/silla03.png"
+// import Silla4 from "../../images/sillas/silla04.png"
 
-function Cards({ sectionTitle }) {
+function Cards({ data}) {
+    const {title, images, texts} = data
+    console.log(images);
   return (
       <Fragment>
   
         <div className={Style.title}>
 
-            <h1>{sectionTitle}</h1>
+            <h1>{title}</h1>
 
 
       </div>
@@ -19,31 +21,27 @@ function Cards({ sectionTitle }) {
     <div className={Style.container}>
        
     <div className={Style.card}>
-        <img src={Silla1} />
-        <h4>Naturaleza</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
-        <a href="#">Leer más</a>
+        <img src={images["i01"]} />
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+        <button className={Style.add}>Añadir al carrito</button>
     </div>
     
     <div className={Style.card}>
-        <img src={Silla2} />
-        <h4>Naturaleza</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
-        <a href="#">Leer más</a>
+        <img src={images["i02"]} />
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+   <button className={Style.add}>Añadir al carrito</button>
     </div>
     
     <div className={Style.card}>
-        <img src={Silla3} />
-        <h4>Naturaleza</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
-        <a href="#">Leer más</a>
+        <img src={images["i03"]} />
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+     <button className={Style.add}>Añadir al carrito</button>
     </div>
     
     <div className={Style.card}>
-        <img src={Silla4} />
-        <h4>Naturaleza</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
-        <a href="#">Leer más</a>
+        <img src={images["i04"]} />
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+       <button className={Style.add}>Añadir al carrito</button>
     </div>
     
 

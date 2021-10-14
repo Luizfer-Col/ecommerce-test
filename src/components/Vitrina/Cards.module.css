@@ -52,3 +52,13 @@
     text-decoration: none;
     color: #3498db;
 }
+
+.add{
+    width: max-content;
+    font-size: medium;
+    margin-inline: 20px;
+    padding: 10px;
+}
+.add:hover{
+    background-color: red;
+}
