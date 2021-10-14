@@ -1,0 +1,32 @@
+.containerppal{
+    max-width:"100%"
+}
+.container{
+    max-height:"600px";
+    margin-bottom:"15px"
+}
+
+.button{
+    position:"absolute";
+    margin-left:"280px";
+    width:"auto";
+    margin-top:"300px"
+
+
+}
+
+.h1text{
+    
+         font-size:"30px";
+          position:"absolute";
+           margin:"200px 30px 30px";
+            width:"600px";
+             color:"white"
+}
+
+.imggallery{
+    width:"100%";
+    height: "500px";
+    object-fit:"cover"
+
+}

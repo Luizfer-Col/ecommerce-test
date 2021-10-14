@@ -11,6 +11,8 @@ import i05 from '../../images/05.jpg'
 import i06 from '../../images/06.jpg'
 import i07 from '../../images/07.jpg'
 import i08 from '../../images/08.jpg'
+import Style from './Gallery.module.css'
+
 
 const data = {
     "01":{
@@ -91,21 +93,19 @@ function Gallery() {
     return (
         <div style={{maxWidth:"100%"}}>
         <div style={{ maxHeight:"600px", marginBottom:"15px"}}>
-        <button style={{position:"absolute", marginLeft:"280px",width:"auto", marginTop:"300px"}}>Ver Productos</button>
+        <button style={{position:"absolute", marginLeft:"280px",width:"max-content",fontSize:"medium", padding:"10px", marginTop:"300px", }}>Ver Productos</button>
         <h1 style={{background:"none", fontSize:"30px", position:"absolute", margin:"200px 30px 30px", width:"600px", color:"white"}}>{imagePpal.textGallery}</h1>
 
-            <img src={imagePpal.img} style={{width:"100%",
-        height: "500px",  objectFit:"cover"}}/>
+            <img src={imagePpal.img} 
+            style={{width:"100%",
+        height: "500px",  objectFit:"cover"}}
+        
+        />
 
         </div>
 
 <Carousel 
 responsive={responsive}
-// arrows={true}
-showDots={true}
-// arrows={false}
-// focusOnSelect={true}
-// centerMode={true}
 >
 
 

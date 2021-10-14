@@ -1,0 +1,18 @@
+.container{
+    display:flex;
+    justify-content: center;
+}
+.container img{
+
+    width: 35%;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 70px;
+    margin-inline: 10px;
+}
+
+.container img:hover{
+    cursor: pointer;
+    opacity: 70%;
+}

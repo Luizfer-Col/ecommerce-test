@@ -23,8 +23,8 @@
     font-size: small;
 }
 .aoptions:hover{
-    color: violet;
+    color: red;
 }
-.aoptions:active{
+/* .aoptions:active{
     color:yellow
-}
+} */

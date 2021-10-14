@@ -8,6 +8,7 @@ import Silla1 from "./../images/sillas/silla01.png"
 import Silla2 from "./../images/sillas/silla02.png"
 import Silla3 from "./../images/sillas/silla03.png"
 import Silla4 from "./../images/sillas/silla04.png"
+import Dual from './Home/Dual'
 
 const dataToCard = {
     title: "NUEVA COLECCIÓN",
@@ -31,6 +32,7 @@ function index() {
             <Navbar/>
             <Carousel />
             <Cards data={dataToCard}/>
+            <Dual />
             <Vitrina />
         </div>
     )
