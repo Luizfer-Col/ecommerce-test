@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Logo from '../../images/logoi.png'
@@ -12,8 +12,62 @@ import i06 from '../../images/06.jpg'
 import i07 from '../../images/07.jpg'
 import i08 from '../../images/08.jpg'
 
+const data = {
+    "01":{
+        img: i01,
+        textThumbnail: "Anim incididunt" ,
+        textGallery: "Anim do duis incididunt ex sunt ex sint laboris eu officia ."
+    },
+    "02":{
+        img: i02,
+        textThumbnail: "Anim veniam" ,
+        textGallery: "Anim veniam excepteur incididunt aliquip ad ex."
+    },
+    "03":{
+        img: i03,
+        textThumbnail: "Elit commodo" ,
+        textGallery: "Elit commodo minim officia laboris ex voluptate."
+    },
+    "04":{
+        img: i04,
+        textThumbnail: "Ad laborum" ,
+        textGallery: "Ad laborum qui ex fugiat deserunt dolore amet mollit ex."
+    },
+    "05":{
+        img: i05,
+        textThumbnail: "Fugiat nulla" ,
+        textGallery: "Fugiat nulla consequat officia cupidatat sunt laboris velit ut."
+    },
+    "06":{
+        img: i06,
+        textThumbnail: "Est eiusmod" ,
+        textGallery: "Est eiusmod qui Lorem Lorem et consequat officia."
+    },
+    "07":{
+        img: i07,
+        textThumbnail: "Proident" ,
+        textGallery: "Proident magna quis sint officia id quis exercitation."
+    },
+    "08":{
+        img: i08,
+        textThumbnail: "Aullamco" ,
+        textGallery: "Id enim non nisi do aliqua ea aute eu ullamco ea amet."
+    },
+}
+
+
+
+
+
 function Gallery() {
-    const [imagePpal, setImagePpal]=useState(i01)
+    const [imagePpal, setImagePpal]=useState(
+        {"img": "", "textThumbnail": "", "textGallery": "",})
+
+        useEffect(() => {
+            setImagePpal(data["01"])
+        }, [])
+
+
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -36,69 +90,69 @@ function Gallery() {
 
     return (
         <div style={{minWidth:"1000px", maxWidth:"1800px"}}>
-        <div style={{minWidth:"1400px", maxHeight:"600px"}}>
-        <button>hola</button>
-        <p>Anim nulla aliquip veniam culpa amet qui voluptate deserunt labore non eiusmod occaecat laboris. Ea voluptate et ad eiusmod magna in consequat velit aliqua. Enim eu ad aute laboris commodo mollit sunt sunt nulla consectetur. Eu laboris enim labore incididunt.</p>
+        <div style={{minWidth:"1400px",maxWidth:"1800px", maxHeight:"600px", marginBottom:"15px"}}>
+        <button style={{position:"fixed", marginLeft:"280px",width:"auto", marginTop:"300px"}}>Ver Productos</button>
+        <h1 style={{background:"none", fontSize:"30px", position:"absolute", margin:"200px 30px 30px", width:"600px", color:"white"}}>{imagePpal.textGallery}</h1>
 
-            <img src={imagePpal} style={{width:"100%",
+            <img src={imagePpal.img} style={{width:"100%",
         height: "500px",  objectFit:"cover"}}/>
 
         </div>
 
 <Carousel 
 responsive={responsive}
+arrows={true}
 >
 
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i01))} >
-      <img src={i01} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 01</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i02))} >
-      <img src={i02} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 02</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i03))} >
-      <img src={i03} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 03</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i04))} >
-      <img src={i04} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 04</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i05))} >
-      <img src={i05} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 05</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i06))} >
-      <img src={i06} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 06</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i07))} >
-      <img src={i07} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 07</h4>
-      </a>
-  </div>
-  <div style={{cursor:"pointer"}}>
-      <a onClick={(()=>setImagePpal(i08))} >
-      <img src={i08} style={{width:"280px", height:"200px"}}/>
-        <h4>Imagen 08</h4>
-      </a>
-  </div>
 
-
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["01"]))} >
+      <img src={data["01"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["01"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["02"]))} >
+      <img src={data["02"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["02"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["03"]))} >
+      <img src={data["03"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["03"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["04"]))} >
+      <img src={data["04"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["04"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["05"]))} >
+      <img src={data["05"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["05"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["06"]))} >
+      <img src={data["06"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["06"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["07"]))} >
+      <img src={data["07"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["07"].textThumbnail}</h4>
+      </a>
+  </div>
+  <div style={{cursor:"pointer"}}>
+      <a onClick={(()=>setImagePpal(data["08"]))} >
+      <img src={data["08"].img} style={{width:"280px", height:"200px"}}/>
+        <h4>{data["08"].textThumbnail}</h4>
+      </a>
+  </div>
 </Carousel>
         </div>
 
