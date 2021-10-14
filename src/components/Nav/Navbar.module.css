@@ -22,3 +22,9 @@
     cursor: pointer;
     font-size: small;
 }
+.aoptions:hover{
+    color: violet;
+}
+.aoptions:active{
+    color:yellow
+}
