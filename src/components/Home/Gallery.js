@@ -71,15 +71,15 @@ function Gallery() {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 464 },
-          items: 10
+          breakpoint: { max: 4000, min: 2000 },
+          items: 6
         },
         desktop: {
-          breakpoint: { max: 2000, min: 1400 },
+          breakpoint: { max: 2000, min: 1700 },
           items: 5
         },
         tablet: {
-          breakpoint: { max: 1400, min: 1200 },
+          breakpoint: { max: 1450, min: 1200 },
           items: 4
         },
         mobile: {
@@ -89,9 +89,9 @@ function Gallery() {
       };
 
     return (
-        <div style={{minWidth:"1000px", maxWidth:"1800px"}}>
-        <div style={{minWidth:"1400px",maxWidth:"1800px", maxHeight:"600px", marginBottom:"15px"}}>
-        <button style={{position:"fixed", marginLeft:"280px",width:"auto", marginTop:"300px"}}>Ver Productos</button>
+        <div style={{maxWidth:"100%"}}>
+        <div style={{ maxHeight:"600px", marginBottom:"15px"}}>
+        <button style={{position:"absolute", marginLeft:"280px",width:"auto", marginTop:"300px"}}>Ver Productos</button>
         <h1 style={{background:"none", fontSize:"30px", position:"absolute", margin:"200px 30px 30px", width:"600px", color:"white"}}>{imagePpal.textGallery}</h1>
 
             <img src={imagePpal.img} style={{width:"100%",
@@ -101,7 +101,11 @@ function Gallery() {
 
 <Carousel 
 responsive={responsive}
-arrows={true}
+// arrows={true}
+showDots={true}
+// arrows={false}
+// focusOnSelect={true}
+// centerMode={true}
 >
 
 
