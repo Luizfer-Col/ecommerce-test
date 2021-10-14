@@ -1,6 +1,5 @@
 import React from 'react'
 import Icon from 'react-icons-kit'
-// import {u267F} from 'react-icons-kit/noto_emoji_regular/u267F'
 import {ic_accessible_twotone} from 'react-icons-kit/md/ic_accessible_twotone'
 import {ic_masks_twotone} from 'react-icons-kit/md/ic_masks_twotone'
 import {medkit} from 'react-icons-kit/fa/medkit'
