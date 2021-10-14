@@ -1,0 +1,32 @@
+.searchBar{
+    border-radius: 4px;
+    border: 1px solid black;
+    display:flex;
+    padding: 5px;
+    height: 40px;
+    
+    /* max- */
+}
+.input{
+    border: none;
+    width: 500px;
+    padding: 10px;
+}
+.input:focus {
+    border: none;
+}
+
+.input:active {
+    border: none;
+}
+button{
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+    width: 40px;
+    
+}
+button:hover{
+    cursor: pointer;
+}
