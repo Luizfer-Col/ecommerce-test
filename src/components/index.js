@@ -9,6 +9,7 @@ import Silla2 from "./../images/sillas/silla02.png"
 import Silla3 from "./../images/sillas/silla03.png"
 import Silla4 from "./../images/sillas/silla04.png"
 import Dual from './Home/Dual'
+import TextOpt from './Vitrina/TextOpt'
 
 const dataToCard = {
     title: "NUEVA COLECCIÓN Dev",
@@ -31,6 +32,7 @@ function index() {
         <div className={Style.container}>
             <Navbar/>
             <Carousel />
+            <TextOpt />
             <Cards data={dataToCard}/>
             <Dual />
             <Vitrina />
