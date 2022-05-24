@@ -18,7 +18,7 @@ function Cards({ data}) {
        
     <div className={Style.card}>
         <img src={images["i01"]} />
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+   <p>DEv Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
         <button className={Style.add}>Añadir al carrito</button>
     </div>
     

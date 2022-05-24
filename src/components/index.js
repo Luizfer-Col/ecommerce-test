@@ -11,7 +11,7 @@ import Silla4 from "./../images/sillas/silla04.png"
 import Dual from './Home/Dual'
 
 const dataToCard = {
-    title: "NUEVA COLECCIÓN",
+    title: "NUEVA COLECCIÓN Dev",
     images: {
         "i01": Silla1,
         "i02": Silla2, 
